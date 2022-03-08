@@ -18,7 +18,7 @@ spring:
 
   # DB ??
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cjgit .jdbc.Driver
     url: jdbc:mysql://localhost:3306/GSS?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeNehavior=convertToNull&connectTimeout=60
     username: MINSOO
     password: SOL
