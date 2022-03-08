@@ -5,9 +5,30 @@ server:
 # ??? ????
 spring:
 
+  devtools:
+    livereload:
+      enabled: true
+
+    freemarker:
+      cache: false
+
+    thymeleaf:
+      cache: false
+
+
   # DB ??
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/GSS?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeNehavior=convertToNull&connectTimeout=60
     username: MINSOO
     password: SOL
+
+    jpa:
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+      hibernate:
+        ddl-auto: create
+      properties:
+        hibernate:
+          show_sql: true
+          format_sql: true
+        open-in-view: true

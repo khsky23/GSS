@@ -21,11 +21,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests( authorize -> authorize
 
                         .mvcMatchers(
-                                "/members/join"
+                                "/members/join",
+                                         "/members/login"
                         )
                         .anonymous()
                         .mvcMatchers(
-                                "/articles/**"
+                                "/articles/**",
+                                "/"
                         )
                         .permitAll()
                         .mvcMatchers(
@@ -38,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .formLogin()
                 .loginPage("/members/login")
-                .loginProcessingUrl("/doLogin")
+                .loginProcessingUrl("/members/doLogin")
                 .usernameParameter("loginId")
                 .passwordParameter("loginPw")
                 .defaultSuccessUrl("/")
